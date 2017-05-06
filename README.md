@@ -20,5 +20,5 @@ services:
       - drupal
     environment:
       - BACKEND=drupal
-    command: /bin/bash -c "envsubst '$$BACKEND' < /etc/nginx/nginx.conf > /etc/nginx/nginx.conf && nginx -g 'daemon off;'"
+    command: /bin/bash -c "envsubst '$$BACKEND' < /etc/nginx/nginx.tmpl > /etc/nginx/nginx.conf && nginx -g 'daemon off;'"
 ```
