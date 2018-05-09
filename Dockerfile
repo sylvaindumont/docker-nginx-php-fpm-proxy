@@ -1,3 +1,3 @@
-FROM nginx:1.13.12-alpine
+FROM nginx:1.14.0-alpine
 
 COPY nginx.tmpl /etc/nginx/nginx.tmpl
