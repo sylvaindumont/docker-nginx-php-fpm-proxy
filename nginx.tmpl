@@ -10,7 +10,13 @@ http {
   include /etc/nginx/mime.types;
   default_type application/octet-stream;
   gzip on;
-  gzip_disable "msie6";
+  gzip_static on;
+  gzip_vary on;
+  gzip_proxied any;
+  gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon application/octet-stream;
+  brotli on;
+  brotli_static on;
+  brotli_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon application/octet-stream;
   client_max_body_size 100m;
   
   server {
