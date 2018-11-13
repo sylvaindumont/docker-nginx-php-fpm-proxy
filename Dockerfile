@@ -1,3 +1,3 @@
-FROM fholzer/nginx-brotli:v1.14.0
+FROM localcool/nginx-brotli:v1.15.6
 
 COPY nginx.tmpl /etc/nginx/nginx.tmpl
